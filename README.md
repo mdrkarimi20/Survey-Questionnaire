@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App].
 
-https://mdrkarimi20.github.io/Survey-Questionnaire
+https://mdrkarimi20.github.io/Survey-Questionnaire/
 
 ## Available Scripts
 
