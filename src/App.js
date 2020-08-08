@@ -55,7 +55,7 @@ function App() {
     },
     {
       id: "5",
-      text: "در مجموع نطرتان راجع به سایت چطور بود؟",
+      text: "در مجموع نظرتان راجع به سایت چطور بود؟",
       options: [
         { key: 1, text: "قوی" },
         { key: 2, text: "معمولی" },
@@ -86,7 +86,7 @@ function App() {
         <Router>
           <Template data={initialData}>
             <Switch>
-              <Route exact path="/question" >
+              <Route exact path="/Survey-Questionnaire" >
                 <Start data={initialData} />
               </Route>
               <Route exact path="/question/:id" >

@@ -1,15 +1,20 @@
-%flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo {
-    height: 25%;
-    @extend %flex;
-    h2 {
-        color: #429fdb;
-        font-size: 4.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width: 551px) {
+        justify-content: center;
+    }
+    img {
+        max-width: 90px;
+        filter: drop-shadow(2px 4px 7px black);
+    }
+    h2.astro {
+        color: #00ffdd;
+        font-size: 2.5rem;
         filter: drop-shadow(2px 2px 7px black);
+        @media (min-width: 750px) {
+            font-size: 2.5rem;
+        }
     }
 }

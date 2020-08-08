@@ -32,7 +32,7 @@ function Survey({ data, setNewAnswer, answers}) {
             <Stepper data={data} answers={answers} />
             <div className="Survey-title pt-5">
                 <h1 className="Survey-title-text">{question.text}</h1>
-                <div className="Survey-title-options">
+                <div className="Survey-title-options py-5">
                     {question.options.map((item) => (
                         <Option optionClickHandler={optionClickHandler} key={item.key} keyValue={item.key}>
                             {item.text}

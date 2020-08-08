@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    @media (max-width: 750px) {
+    @media (max-width: 760px) {
         padding: 0 2.5rem;
     }
     .Survey-title {
@@ -43,7 +43,7 @@
             align-items: center;
         }
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
     }
 }
 

@@ -11,7 +11,9 @@ function Template({ children, data }) {
     }, 3500);
   }, []);
 
-  return <>{isLoad ? <Load data={data} /> : <div className="Template">{children}</div>}</>;
+  return <>
+    {isLoad ? <Load data={data} /> : <div className="Template">{children}</div>}
+  </>;
 }
 
 export default Template;

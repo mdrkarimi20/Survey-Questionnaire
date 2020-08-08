@@ -17,7 +17,7 @@ body {
 }
 
 .survey {
-    padding: 0;
+    padding: 0 !important;
     padding-top: 3rem;
     padding-left: 3rem;
     margin: 0 !important;
