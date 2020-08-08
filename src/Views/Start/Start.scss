@@ -18,12 +18,52 @@
         text-align: center;
         flex-direction: column;
         animation: entring 500ms ease-in-out 0s 1;
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 10%;
+                filter: drop-shadow(2px 4px 7px black);
+            }
+            h2.astro {
+                color: #00ffdd;
+                font-size: 2.5rem;
+                filter: drop-shadow(2px 2px 7px black);
+            }
+        }
         .Start-title-text {
             font-size: 3rem;
             color: #e0e0e0;
             filter: drop-shadow(1px 2px 3px black);
             @media (max-width: 630px) {
                 font-size: 2rem;
+            }
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #e3e3e3;
+            width: 100%;
+            .footer-top {
+                display: flex;
+                font-size: 1.3rem;
+                .footer-top-logo {
+                    background-image: linear-gradient(to right, #f197bd 18%, #ed865d 100%);
+                    border-radius: 27px 8px 8px 8px;
+                    padding: 0 0.5rem 0 0.8rem;
+                    margin-right: 0.5rem;
+                    font-family: "Dancing Script", cursive;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    filter: drop-shadow(1px 1px 1px black);
+                }
+            }
+            .footer-text {
+                font-size: 0.8rem;
+                margin: 0.3rem 0;
             }
         }
     }

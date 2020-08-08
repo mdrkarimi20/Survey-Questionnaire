@@ -20,3 +20,9 @@
     border-radius: 50%;
     transition: all 0.3s;
 }
+
+@media (max-width: 550px) {
+    .Stepper-Performance {
+        border: 1rem solid rgba(0, 255, 255, 0.747);
+    }
+}
