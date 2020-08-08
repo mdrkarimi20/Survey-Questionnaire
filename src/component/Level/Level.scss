@@ -1,0 +1,25 @@
+.Level {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 2px black);
+    background-image: linear-gradient(to left, #f197bd 18%, #ed865d 100%);
+    transition: all 0.3s;
+    @media (max-width: 550px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.Level-done {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 2px black);
+    background-color: #d8d8d8;
+    transition: all 0.3s;
+    @media (max-width: 550px) {
+        width: 20px;
+        height: 20px;
+    }
+}

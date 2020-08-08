@@ -19,6 +19,7 @@ body {
 .survey {
     padding: 0;
     padding-top: 3rem;
+    padding-left: 3rem;
     margin: 0 !important;
     background-image: url("http://mohammadreza-karimi.ir/background/12.jpg");
     background-position: center;

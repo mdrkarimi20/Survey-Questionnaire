@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react";
-import "./Question.scss";
+import "./Survey.scss";
 import { useParams, useHistory } from "react-router-dom";
-import Stepper from "../../Components/Stepper/Stepper";
-import Option from "../../Components/Option/Option";
-import Brand from "../../Components/Brand/Brand";
-import Intro from "../../Components/Intro/Intro";
+import Stepper from "../../component/Stepper/Stepper";
+import Option from "../../component/Option/Option";
+import Logo from "../../component/Logo/Logo";
+import Footer from "../../component/Footer/Footer";
 
-function Survey({initialData, setNewAnswer, answers }) {
+function Survey({ data, setNewAnswer, answers}) {
     const history = useHistory();
     const { id } = useParams();
 
-    const [ques, setQues] = useState(data.questions.find((item) => item.id === id));
-    const [quesIndex, setQuesIndex] = useState(data.questions.findIndex((item) => item.id === id));
+    const [question, setQuestion] = useState(data.questions.find((item) => item.id === id));
+    const [questionNumber, setQuestionNumber] = useState(data.questions.findIndex((item) => item.id === id));
 
     useEffect(() => {
-        setQues(data.questions.find((item) => item.id === id));
-        setQuesIndex(data.questions.findIndex((item) => item.id === id));
+        setQuestion(data.questions.find((item) => item.id === id));
+        setQuestionNumber(data.questions.findIndex((item) => item.id === id));
     }, [id]);
 
     const optionClickHandler = (key) => {
         setNewAnswer(id, key);
-        if (data.questions[quesIndex + 1]) {
-            history.push(`/question/${data.questions[quesIndex + 1].id}`);
+        if (data.questions[questionNumber + 1]) {
+            history.push(`/question/${data.questions[questionNumber + 1].id}`);
         } else {
             history.push("/end");
         }
     };
 
     return (
-        <div className="Question">
-            <Stepper initialData={initialData} answers={answers} />
-            <div className="Question__topic">
-                <h1 className="Question__topic--title">{ques.text}</h1>
-                <div className="Question__topic--options">
-                    {ques.options.map((item) => (
+        <div className="Survey">
+            <Stepper data={data} answers={answers} />
+            <div className="Survey-title pt-5">
+                <h1 className="Survey-title-text">{question.text}</h1>
+                <div className="Survey-title-options">
+                    {question.options.map((item) => (
                         <Option optionClickHandler={optionClickHandler} key={item.key} keyValue={item.key}>
                             {item.text}
                         </Option>
@@ -41,8 +41,8 @@ function Survey({initialData, setNewAnswer, answers }) {
                 </div>
             </div>
             <footer>
-                <Intro />
-                <Brand data={data} />
+                <Footer />
+                <Logo logo_url={data.logo_url} />
             </footer>
         </div>
     );
