@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Yekan";
+    src: url(fonts/Yekan.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Yekan";
+}
+
 .App {
     text-align: center;
 }
@@ -10,6 +24,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Yekan" !important;
 }
 
 .App-logo {
