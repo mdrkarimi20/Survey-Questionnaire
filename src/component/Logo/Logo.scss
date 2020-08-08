@@ -1,0 +1,15 @@
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 25%;
+    @extend %flex;
+    h2 {
+        color: #429fdb;
+        font-size: 4.5rem;
+        filter: drop-shadow(2px 2px 7px black);
+    }
+}

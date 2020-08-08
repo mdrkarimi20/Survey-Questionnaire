@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Start from "./component/Start/Start";
+import Start from "./Views/Start/Start";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Container >
+        <Container fluid={true} className="survey">
           <Start />
           <Switch>
             {/*<Route exact path="/question/:id" >

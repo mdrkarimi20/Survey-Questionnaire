@@ -3,29 +3,31 @@ import "./Start.scss";
 import { Link } from "react-router-dom";
 import { Button } from 'reactstrap';
 import { CSSTransition } from "react-transition-group";
+import Logo from "../../component/Logo/Logo";
+import Footer from "../../component/Footer/Footer";
 
-function Start({ data }) {
+function Start() {
 
     const initialData = {
         organization_name: "",
         organization_name_fa: "زمپ",
-        logo_url: "http://panahiazar.ir/images/zemp-logo.png",
+        logo_url: "http://mohammadreza-karimi.ir/image/3410491.png",
         questions: [{
             id: "1",
-            text: "سرعت اپلیکیشن ما را چگونه ارزیابی میکنید؟",
+            text: "چقدر از امکانات سایت راضی هستید؟",
             options: [
-                { key: 1, text: "خوب" },
+                { key: 1, text: "زیاد" },
                 { key: 2, text: "متوسط" },
-                { key: 3, text: "بد" },
+                { key: 3, text: "کم" },
             ],
         },
         {
             id: "2",
-            text: "نظر شما راجب ظاهر اپلیکیشن چیست؟",
+            text: "میزات تعامل شما با سایت چقدر است؟",
             options: [
-                { key: 1, text: "زیبا" },
-                { key: 2, text: "معمولی" },
-                { key: 3, text: "زشت" },
+                { key: 1, text: "زیاد" },
+                { key: 2, text: "متوسط" },
+                { key: 3, text: "کم" },
             ],
         },
         {
@@ -108,20 +110,11 @@ function Start({ data }) {
             <div className="Start">
                 <div className="Start-title">
                     <h1 className="Start-title-text">فرم نظرسنجی و ارتقا سطح خدمت رسانی</h1>
-                    <div className="logo">
-                        <img src={initialData.logo_url} alt={"astro-logo"} height="100%" />
-                        <h2>آسترو</h2>
-                    </div>
+                    <Logo logo_url={initialData.logo_url} />
                     <Link to={`/question/${initialData.questions[0].id}`}>
-                        <Button color="primary" className="btn btn-lg animated-button victoria-one">شروع</Button>
+                        <Button className="button-start">شروع</Button>
                     </Link>
-                    <div className="Intro">
-                        <div>
-                            <div className="Intro-logo">Soally</div>
-                            <span>قدرت گرفته از</span>
-                        </div>
-                        <span className="Intro__bottom">آنلاین CRM پلتفرم طراحی فرم های</span>
-                    </div>
+                    <Footer />
                 </div>
             </div>
         </CSSTransition>
