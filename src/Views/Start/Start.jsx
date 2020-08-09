@@ -3,7 +3,6 @@ import "./Start.scss";
 import { Link } from "react-router-dom";
 import { Button } from 'reactstrap';
 import { CSSTransition } from "react-transition-group";
-import Footer from "../../component/Footer/Footer";
 
 function Start({ data }) {
 

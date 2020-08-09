@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Start from "./Views/Start/Start";
 import Survey from "./Views/Survey/Survey";
-import Template from "./component/Template/Template";
+import Template from "./component/ShowPage/ShowPage";
 
 import {
   BrowserRouter as Router,

@@ -1,12 +1,18 @@
 import React from "react";
 import "./Load.scss";
 
-function Loading({ data }) {
+function Load({ data }) {
   return (
-    <div className="Load">
-      <img src={data.logo_url} alt={"zemp-logo"} />
+    <div className="load">
+      <div class="image-container">
+        <img src={data.logo_url} alt={"astro"} />
+      </div>
+      <div class="text-container">
+        <h1>آسترو</h1>
+        <div class="fading-effect"></div>
+      </div>
     </div>
   );
 }
 
-export default Loading;
+export default Load;

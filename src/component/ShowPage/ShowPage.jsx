@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Load from "../../Views/Load/Load";
-import "./Template.scss";
+import "./ShowPage.scss";
 
-function Template({ children, data }) {
+function ShowPage({ children, data }) {
   const [isLoad, setIsLoad] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoad(false);
-    }, 3500);
+    }, 3600);
   }, []);
 
   return <>
@@ -16,4 +16,4 @@ function Template({ children, data }) {
   </>;
 }
 
-export default Template;
+export default ShowPage;
