@@ -3,6 +3,7 @@ import './App.css';
 import Start from "./Views/Start/Start";
 import Survey from "./Views/Survey/Survey";
 import Template from "./component/ShowPage/ShowPage";
+import End from "./Views/End/End";
 import {
   BrowserRouter as Router,
   Switch,
@@ -90,6 +91,9 @@ function App() {
               </Route>
               <Route exact path="/question/:id" >
                 <Survey data={initialData} setNewAnswer={setNewAnswer} answers={answers} />
+              </Route>
+              <Route exact path="/end" >
+                <End data={initialData} />
               </Route>
             </Switch>
           </Template>

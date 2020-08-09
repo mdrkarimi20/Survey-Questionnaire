@@ -1,27 +1,27 @@
 %flex {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.Start {
-    padding: 0 7rem;
+.end {
+    padding: 0 4rem;
+    display: flex;
     @extend %flex;
     flex-direction: column;
     height: 100vh;
     @media (max-width: 630px) {
         padding: 0 2.5rem;
     }
-    .Start-title {
+    .end-title {
         @extend %flex;
-        height: 100vh;
         text-align: center;
         flex-direction: column;
+        justify-content: center;
+        height: 100%;
         animation: entring 500ms ease-in-out 0s 1;
-        .logo {
-            display: flex;
+        .end-logo {
+            @extend %flex;
             justify-content: center;
-            align-items: center;
             img {
                 width: 10%;
                 filter: drop-shadow(2px 4px 7px black);
@@ -32,7 +32,7 @@
                 filter: drop-shadow(2px 2px 7px black);
             }
         }
-        .Start-title-text {
+        .end-title-text {
             font-size: 3rem;
             color: #e0e0e0;
             filter: drop-shadow(1px 2px 3px black);
@@ -69,19 +69,4 @@
             }
         }
     }
-}
-
-.button-start {
-    background-image: linear-gradient(to right, #cb51fe 10%, #4d91df 100%);
-    font-family: "Yekan";
-    font-size: 2rem !important;
-    padding: 0.8rem 4rem !important;
-    color: black !important;
-    font-weight: bold !important;
-    border: none !important;
-    cursor: pointer !important;
-    margin-top: 2rem !important;
-    border-radius: 50px !important;
-    filter: drop-shadow(1px 2px 3px black) !important;
-    transition: all 0.3s !important;
 }
